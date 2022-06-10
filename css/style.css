@@ -1,10 +1,5 @@
 @charset "UTF-8";
-/*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -17,10 +12,30 @@ html {
 .loading-hide{
   display: none;
 }
+#domain-name-list{
+  list-style: none;
+}
+.list-item{
+  color: white;
+  font-size: x-large;
+}
 
 body {
   margin: 0;
 }
+
+select {
+  margin: 50px;
+  width: 300px;
+  background: #2ecd70;
+  color: #000;
+}
+
+option:not(:checked) {
+  background-color: #2ecd70;
+}
+
+
 
 article,
 aside,

@@ -100,27 +100,34 @@
                 </h1>
                 <h2 class="fh5co-intro-sub animate-2 to-animate">
                   Search your domain name here!
-                  <input required id="domain-name" class="form-control" />
+                  <div style="display: flex">
+                    <input required id="domain-name" class="form-control" />
+                    <select id="select">
+                      <option>.ru</option>
+                      <option>.au</option>
+                      <option>.uk</option>
+                      <option>.net</option>
+                      <option>.org</option>
+                      <option>.com</option>
+                    </select>
+                  </div>
                   <a id="search" href="#"
                     >SEARCH<i class="icon-magnifying-glass"></i>
                   </a>
                 </h2>
                 <h1 class="loading-hide" id="loading">Loading...</h1>
+                <ul id="domain-name-list"></ul>
                 <p class="fh5co-social text-center" id="fh5co-intro-social">
-                  <a href="#" class="to-animate"
-                    ><i class="icon-facebook-with-circle"></i
-                  ></a>
-                  <a href="#" class="to-animate"
+                  <a href="https://twitter.com/bilalscripts" class="to-animate"
                     ><i class="icon-twitter-with-circle"></i
                   ></a>
-                  <a href="#" class="to-animate"
-                    ><i class="icon-dribbble-with-circle"></i
+                  <a
+                    href="https://linkedin.com/in/bilalscripts"
+                    class="to-animate"
+                    ><i class="icon-linkedin-with-circle"></i
                   ></a>
-                  <a href="#" class="to-animate"
-                    ><i class="icon-google-with-circle"></i
-                  ></a>
-                  <a href="#" class="to-animate"
-                    ><i class="icon-instagram-with-circle"></i
+                  <a href="https://github.com/bilalscripts" class="to-animate"
+                    ><i class="icon-github-with-circle"></i
                   ></a>
                 </p>
               </div>
@@ -150,7 +157,7 @@
     </footer>
 
     <!-- Fetching Data -->
-    <script type="module" src="./js//fetchingData.js"></script>
+    <script src="./js//fetchingData.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>

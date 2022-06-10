@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/bilalscripts/givemedomain/issues"
   },
-  "homepage": "https://github.com/bilalscripts/givemedomain#readme",
-  "dependencies": {
-    "whoiser": "^1.13.1"
-  }
+  "homepage": "https://github.com/bilalscripts/givemedomain#readme"
 }
