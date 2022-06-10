@@ -28,7 +28,6 @@ btn.addEventListener("click", async (event) => {
 
     var result = await data.json();
 
-    console.log("fetching data");
     if (result.length > 0) {
       result.length = 10;
       for (i of result) {
@@ -43,7 +42,6 @@ btn.addEventListener("click", async (event) => {
         options
       );
       const isavailable = await domainInfo.json();
-      console.log(isavailable);
 
       list.push(
         `${isavailable.domain.name}  ${
