@@ -18,6 +18,8 @@ html {
 .list-item{
   color: white;
   font-size: x-large;
+  padding: 10px;
+  border: solid #166f3b;
 }
 
 body {

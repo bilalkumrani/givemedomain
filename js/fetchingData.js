@@ -7,6 +7,10 @@ const options = {
 };
 const domainData = [];
 let btn = document.getElementById("search");
+const list = [];
+var ul = document.getElementById("domain-name-list");
+
+let select = document.getElementById("select");
 
 btn.addEventListener("click", async (event) => {
   let loading = document.getElementById("loading");
@@ -31,9 +35,7 @@ btn.addEventListener("click", async (event) => {
         domainData.push(i.word.split(" ").join(""));
       }
     }
-    var ul = document.getElementById("domain-name-list");
-    var li = document.createElement("li");
-    let select = document.getElementById("select");
+
     var value = select.options[select.selectedIndex].value;
     for (word of domainData) {
       let domainInfo = await fetch(
@@ -43,12 +45,20 @@ btn.addEventListener("click", async (event) => {
       const isavailable = await domainInfo.json();
       console.log(isavailable);
 
-      loading.classList.remove("loading-show");
-      loading.classList.add("loading-hide");
+      list.push(
+        `${isavailable.domain.name}  ${
+          isavailable.domain.isAvailable
+            ? " is Available <<------"
+            : " is Not Available"
+        }`
+      );
+    }
+    loading.classList.remove("loading-show");
+    loading.classList.add("loading-hide");
+    for (item of list) {
+      var li = document.createElement("li");
       li.setAttribute("class", "list-item");
-      li.innerHTML = `${isavailable.domain.name}  ${
-        isavailable.domain.isAvailable ? " is Available" : " is Not Available"
-      }`;
+      li.innerHTML = item;
       ul.appendChild(li);
     }
   }
