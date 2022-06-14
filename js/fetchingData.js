@@ -7,12 +7,15 @@ const options = {
 };
 const domainData = [];
 let btn = document.getElementById("search");
-const list = [];
+
 var ul = document.getElementById("domain-name-list");
 
 let select = document.getElementById("select");
 
 btn.addEventListener("click", async (event) => {
+  var ul = document.getElementById("domain-name-list");
+  ul.innerHTML = "";
+  const list = [];
   let loading = document.getElementById("loading");
   loading.classList.remove("loading-hide");
   loading.classList.add("loading-show");
