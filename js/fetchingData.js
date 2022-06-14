@@ -5,7 +5,7 @@ const options = {
     "X-RapidAPI-Host": "domaination.p.rapidapi.com",
   },
 };
-const domainData = [];
+
 let btn = document.getElementById("search");
 
 var ul = document.getElementById("domain-name-list");
@@ -14,6 +14,7 @@ let select = document.getElementById("select");
 
 btn.addEventListener("click", async (event) => {
   var ul = document.getElementById("domain-name-list");
+  const domainData = [];
   ul.innerHTML = "";
   const list = [];
   let loading = document.getElementById("loading");
